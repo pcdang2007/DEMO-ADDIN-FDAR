@@ -358,3 +358,115 @@ input[type="radio"] {
     font-size: 31px;
     font-weight: 500;
 }
+
+/*  */
+
+/* Khung bao ngoài */
+.result-card {
+    background-color: #ffffff;
+    width: 1070px; /* Khớp với chiều rộng form của bạn */
+    margin: 30px auto;
+    padding: 50px 40px;
+    border: 3px solid #ACB78F;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+
+/* Tiêu đề chính */
+.result-title {
+    text-align: center;
+    font-size: 52px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.result-subtitle {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
+/* Các tiêu đề mục (Màu đỏ cam) */
+.group-header {
+    color: #FF5555;
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.italic-note {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 34px;
+}
+
+/* Bố cục thông tin chung */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    font-size: 32px;
+}
+
+.info-grid p { margin: 0; }
+
+/* Nội dung hướng dẫn bón */
+.result-group {
+    margin-bottom: 45px;
+}
+
+.result-group p, .guide-item {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.blue-text {
+    color: #2D7DD2; /* Màu xanh đậm chuyên nghiệp */
+    font-weight: bold;
+}
+
+/* Danh sách các đợt bón */
+.sub-list {
+    list-style: none;
+    padding-left: 50px;
+    margin-top: 20px;
+}
+
+.sub-list li {
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 12px;
+    padding-left: 10px;
+}
+
+.sub-list li::before {
+    content: "+";
+    position: absolute;
+    left: -35px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer của mẫu */
+.result-footer {
+    text-align: center;
+    font-size: 22px;
+    color: #888;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 2px dashed #ACB78F;
+}
+
+/* Hiệu ứng nhấn mạnh số liệu */
+.result-card strong {
+    color: #000; /* Ghi đè màu đỏ của strong trong form cũ */
+    font-weight: 800;
+}
