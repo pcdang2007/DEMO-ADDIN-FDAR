@@ -26,7 +26,7 @@
         </header>
 
         <main class="main-container">
-            <form action="#" method="POST" id="FDS">
+            <form id="FDS">
                 
                 <div class="form-section">
                     <h2 class="section-header">Thông tin chung</h2>
@@ -151,6 +151,43 @@
                 <button type="submit" class="submit-btn">TÍNH TOÁN & ĐỀ XUẤT</button>
 
             </form>
+
+            <div class="result-card" id="ResultSection" style="display: none;">
+                <h1 class="result-title">ĐỀ XUẤT PHÂN BÓN HỒ TIÊU</h1>
+                <p class="result-subtitle">(bón phân đơn trộn)</p>
+
+                <div class="result-group">
+                    <h2 class="group-header">Thông tin chung:</h2>
+                    <div class="info-grid">
+                        <p>Nội dung không khả dụng ở bản demo-web</p>
+                    </div>
+                </div>
+
+                <div class="result-group">
+                    <h2 class="group-header">Đánh giá độ phì đất <span class="italic-note">(nhận xét và trị số):</span></h2>
+                    <p id="dat"></p>
+                </div>
+
+                <div class="result-group">
+                    <h2 class="group-header">Hướng dẫn bón phân</h2>
+                    
+                    <div class="guide-item">
+                        <span class="blue-text">* Bón vôi bột:</span><span id="VOI"></span>
+                    </div>
+
+                    <div class="guide-item">
+                        <span class="blue-text">* Phân hữu cơ:</span><span id="HC"></span>
+                    </div>
+
+                    <div class="guide-item">
+                        <span class="blue-text">* Phân vô cơ:</span><span id="VC"></span>
+                    </div>
+                </div>
+
+                <footer class="result-footer">
+                    Mẫu được phân tích bởi hệ thống Beta 0.1 - B01
+                </footer>
+            </div>
         </main>
 
         <footer class="footer-container">
