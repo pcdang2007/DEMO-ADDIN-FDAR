@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <title>Add-in đề xuất phân bón cho cây hồ tiêu kinh doanh</title>
+    
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="header-container">
+            <div class="left-actions">
+                <img src="./data/image/system_logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'"> 
+                <div class="locale-switcher">
+                    <img src="./data/image/system_flag.png" alt="VN" class="flag-img" onerror="this.style.backgroundColor='red'">
+                    <span class="locale-indicator">vi-VN</span>
+                </div>
+            </div>
+            <div class="right-actions">
+                <div class="menu-icon">
+                    <img src="./data/image/system_menu.svg" alt="Menu" onerror="this.src='https://placehold.co/24x24/white/white'">
+                </div>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <form action="#" method="POST" id="FDS">
+                
+                <div class="form-section">
+                    <h2 class="section-header">Thông tin chung</h2>
+                    
+                    <div class="input-field inline">
+                        <label>Địa chỉ :</label>
+                        <input type="text" name="DiaChi" placeholder="Địa chỉ vườn">
+                    </div>
+
+                    <div class="input-field inline">
+                        <label>Diện tích <strong>*</strong> :</label>
+                        <input type="text" name="DienTich" placeholder="Diện tích tiêu (ha)" required>
+                    </div>
+
+                    <div class="input-field inline">
+                        <label>Tuổi cây :</label>
+                        <input type="text" name="TuoiCay" placeholder="Tuổi cây tiêu (năm)">
+                    </div>
+
+                    <div class="input-field inline">
+                        <label>Năng suất <strong>*</strong> :</label>
+                        <input type="text" name="NangSuat" placeholder="Tấn tiêu đen/ ha" required>
+                    </div>
+
+                    <div class="input-field inline">
+                        <label>Hiện trạng vườn hồ tiêu (cảm quan) <strong>*</strong> :</label>
+                        <div class="input-group">
+                            <label class="radio-item">
+                                <input type="radio" name="HienTrang" value="tot"> <span>Tốt</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="HienTrang" value="trungbinh"> <span>Trung bình</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="HienTrang" value="xau"> <span>Xấu</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="section-header">Độ phì của đất</h2>
+
+                    <div class="input-field inline">
+                        <label>Bạn có kết quả phân tích đất không? <strong>*</strong></label>
+                        <div class="input-group">
+                            <label class="radio-item">
+                                <input type="radio" name="kq_ptd" value="yes" checked> <span>Có</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="kq_ptd" value="no" disabled> <span>Không</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-field inline">
+                        <label>Độ chua đất (pH<sub>KCl</sub>) <strong>*</strong> :</label>
+                        <input type="text" name="gt_pH" required>
+                    </div>
+
+                    <div class="input-field inline">
+                        <label>Hàm lượng hữu cơ <strong>*</strong> :</label>
+                        <input type="text" name="gt_HC" required>
+                    </div>
+
+                    <div class="input-field inline">
+                        <label>Đạm tổng số (N%) <strong>*</strong> :</label>
+                        <input type="text" name="gt_NT" required>
+                    </div>
+
+                    <div class="input-field inline">
+                        <label>Lân dễ tiêu (P<sub>2</sub>O<sub>5</sub>) <strong>*</strong> :</label>
+                        <input type="text" name="gt_PD" required>
+                    </div>
+
+                    <div class="input-field inline">
+                        <label>Kali dễ tiêu (K<sub>2</sub>O) <strong>*</strong> :</label>
+                        <input type="text" name="gt_KD" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="input-field">
+                        <label>Kiểu phân muốn sử dụng <strong>*</strong></label>
+                        <div class="input-group" style="flex-direction: column; justify-content: space-evenly; margin-top: 15px; gap: 20px;">
+                            <label class="radio-item">
+                                <input type="radio" name="KieuPhan" value="don" checked> <span>Phân đơn trộn</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="KieuPhan" value="npk" disabled> <span>Phân NPK-TE</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-field inline locked">
+                        <label>Ghi chú :</label>
+                        <input type="text" name="GhiChu" disabled>
+                    </div>
+
+                    <div class="input-field inline locked">
+                        <label>Nơi phân tích đất :</label>
+                        <input type="text" name="NoiPTDat" disabled>
+                    </div>
+                </div>
+
+                <div class="form-section box-section">
+                    <div class="note-header">
+                        <span>Hỗ trợ quét phiếu phân tích đất</span>
+                    </div>
+                    <ul>
+                        <li>Ảnh cần rõ nét, không mờ hoặc mất góc.</li>
+                        <li>Hệ thống sẽ áp dụng công nghệ AI để phân tích ảnh và tự động trích xuất thông tin phục vụ đăng ký.</li>
+                    </ul>
+                    
+                    <div class="input-field locked">
+                        <button type="button" class="add-image-btn" disabled>
+                            Tải ảnh phiếu phân tích
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">TÍNH TOÁN & ĐỀ XUẤT</button>
+
+            </form>
+        </main>
+
+        <footer class="footer-container">
+            <div class="dou-line">
+                <span class="line1">Ver βeta 0.1</span>
+                <span class="line2">release 11.12.25</span>
+            </div>
+            <div class="dou-line">
+                <span class="line1">CSH_BP</span>
+                <span class="line2">by P. C. Dang et al.</span>
+            </div>
+            <div class="security-info">Secured by ϒSS</div>
+            <div class="account-id">uid:066207016573</div>
+        </footer>
+    </div>
+    <script>
+        function scaleAndCenter() {
+            const container = document.querySelector('.app-container');
+            const dw = 1170;
+            const dh = 2532;
+            const ww = window.innerWidth;
+            const wh = window.innerHeight;
+
+            // Logic của bạn: Chọn tỉ lệ nhỏ hơn để luôn nằm trọn trong màn hình
+            const scale = Math.min(ww / dw, wh / dh);
+
+            // Áp dụng:
+            // 1. translate(-50%, -50%): Để căn giữa từ vị trí top 50% left 50%
+            // 2. scale(...): Để thu phóng theo tỉ lệ tính được
+            container.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        }
+
+        window.addEventListener('load', scaleAndCenter);
+        window.addEventListener('resize', scaleAndCenter);
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

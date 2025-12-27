@@ -1,0 +1,360 @@
+/* --- RESET & GLOBAL --- */
+:root {
+    --primary-text: #000;
+    --footer-text: #464646;
+}
+
+* {
+    user-select: none !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+strong {
+    color: #FF5555;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #BCC48F 0%, #ACB78F 75%, #A4B15D 100%);
+
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 1170px;
+    height: 2532px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    
+    /* overflow: hidden; */
+    background: linear-gradient(180deg, #BCC48F 0%, #ACB78F 75%, #A4B15D 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.app-container::before {
+    content: "";
+    position: absolute;
+    left: -724px;
+    top: 510px;
+    width: 1894px; 
+    height: 1894px;
+    background-image: url('./data/image/system_defaultbackground.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    opacity: 0.35;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.header-container, .main-container, .footer-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- HEADER STYLES --- */
+.header-container {
+    width: 1170px;
+    height: 165px;
+    padding: 20px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-actions {
+    width: 280px;
+    height: 125px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo-img {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+}
+
+.locale-switcher {
+    width: 135px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flag-img {
+    width: 135px;
+    height: 90px;
+    object-fit: cover;
+    display: block;
+}
+
+.locale-indicator {
+    width: 76px;
+    height: 35px;
+    font-size: 23px; 
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+.right-actions {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* --- MAIN CONTAINER --- */
+.main-container {
+    width: 100%;
+    height: calc(2532px - 165px - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* --- FORM CONTAINER --- */
+form {
+    width: 1070px;
+    background-color: #FFFFFF;
+    padding: 15px 20px 45px 20px;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px; 
+}
+
+/* --- FORM SECTION --- */
+.form-section {
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* --- TYPOGRAPHY: HEADER --- */
+.section-header {
+    color: #FF5555;
+    font-size: 45px;
+    font-weight: bold;
+    border: none;
+    padding-left: 0;
+}
+
+/* --- TYPOGRAPHY: LABEL --- */
+.input-field label {
+    font-size: 30px;
+    color: #000000;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* --- INPUT STYLES --- */
+input[type="text"] {
+    background-color: #F4F4F4;
+    border: 1px solid #CDCDCD;
+    border-radius: 17px;
+    
+    color: #000000;
+    font-size: 26px;
+    
+    width: 100%;
+    padding: 15px 25px; 
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Placeholder color */
+::placeholder {
+    color: #64748B;
+    opacity: 1; 
+}
+
+input:focus {
+    border-color: #51582e; 
+}
+
+/* --- LOGIC [INLINE] --- */
+
+.input-field.inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.input-field.inline label {
+    margin-bottom: 0;
+    white-space: nowrap; 
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.input-field.inline input {
+    flex-grow: 1;
+    height: 60px;
+}
+
+.input-field:has(.input-group) {
+    display: flex;
+    flex-direction: column !important; 
+    align-items: flex-start !important;
+}
+
+.input-field:has(.input-group) label {
+    white-space: normal; 
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* height: 45px; */
+    margin-top: 5px;
+    justify-content: space-around;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.radio-item span {
+    font-size: 28px;
+}
+
+input[type="radio"] {
+    width: 35px;
+    height: 35px;
+    accent-color: #51582e; 
+}
+
+.input-field.locked input {
+    background-color: #E0E0E0;
+    color: #888;
+    border-style: dashed;
+}
+
+.box-section {
+    background-color: #FFF8E6; 
+    border: 2px dashed #FED618;
+    border-radius: 20px;
+    padding: 30px;
+    margin-block: 40px;
+}
+
+.box-section .note-header {
+    font-size: 38px;
+}
+
+.box-section ul li {
+    font-size: 28px;
+    margin-bottom: 10px;
+    list-style-position: inside;
+}
+
+.input-field:has(.add-image-btn){
+    width: 380px;
+    margin-inline: auto;
+}
+
+.add-image-btn {
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 17px;
+    background-color: #7F8755;
+    outline: none;
+    border: none;
+    opacity: 60%;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+.submit-btn {
+    font-size: 38px;
+    padding: 20px;
+    border-radius: 17px;
+    background-color: #7F8755;
+    outline: none;
+    border: none;
+    color: #fff;
+    margin-inline: auto;
+    width: 500px;
+    cursor: pointer;
+}
+
+/* --- FOOTER STYLES --- */
+.footer-container {
+    width: 1170px;
+    height: 72px;
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    opacity: 0.5;
+    font-size: 31px;
+    color: var(--footer-text);
+}
+
+.dou-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.dou-line .line1 {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.dou-line .line2 {
+    font-size: 18.5px;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.security-info, .account-id {
+    font-size: 31px;
+    font-weight: 500;
+}
