@@ -33,22 +33,22 @@
                     
                     <div class="input-field inline">
                         <label>Địa chỉ :</label>
-                        <input type="text" name="DiaChi" placeholder="Địa chỉ vườn">
+                        <input type="text" name="DiaChi" placeholder="Địa chỉ vườn" autocomplete="off">
                     </div>
 
                     <div class="input-field inline">
                         <label>Diện tích <strong>*</strong> :</label>
-                        <input type="text" name="DienTich" placeholder="Diện tích tiêu (ha)" required>
+                        <input type="text" name="DienTich" placeholder="Diện tích tiêu (ha)" required  autocomplete="off">
                     </div>
 
                     <div class="input-field inline">
                         <label>Tuổi cây :</label>
-                        <input type="text" name="TuoiCay" placeholder="Tuổi cây tiêu (năm)">
+                        <input type="text" name="TuoiCay" placeholder="Tuổi cây tiêu (năm)"  autocomplete="off">
                     </div>
 
                     <div class="input-field inline">
                         <label>Năng suất <strong>*</strong> :</label>
-                        <input type="text" name="NangSuat" placeholder="Tấn tiêu đen/ ha" required>
+                        <input type="text" name="NangSuat" placeholder="Tấn tiêu đen/ ha" required  autocomplete="off">
                     </div>
 
                     <div class="input-field inline">
@@ -84,27 +84,27 @@
 
                     <div class="input-field inline">
                         <label>Độ chua đất (pH<sub>KCl</sub>) <strong>*</strong> :</label>
-                        <input type="text" name="gt_pH" required>
+                        <input type="text" name="gt_pH" required autocomplete="off">
                     </div>
 
                     <div class="input-field inline">
                         <label>Hàm lượng hữu cơ <strong>*</strong> :</label>
-                        <input type="text" name="gt_HC" required>
+                        <input type="text" name="gt_HC" required autocomplete="off">
                     </div>
 
                     <div class="input-field inline">
                         <label>Đạm tổng số (N%) <strong>*</strong> :</label>
-                        <input type="text" name="gt_NT" required>
+                        <input type="text" name="gt_NT" required autocomplete="off">
                     </div>
 
                     <div class="input-field inline">
                         <label>Lân dễ tiêu (P<sub>2</sub>O<sub>5</sub>) <strong>*</strong> :</label>
-                        <input type="text" name="gt_PD" required>
+                        <input type="text" name="gt_PD" required autocomplete="off">
                     </div>
 
                     <div class="input-field inline">
                         <label>Kali dễ tiêu (K<sub>2</sub>O) <strong>*</strong> :</label>
-                        <input type="text" name="gt_KD" required>
+                        <input type="text" name="gt_KD" required autocomplete="off">
                     </div>
                 </div>
 
@@ -159,7 +159,7 @@
                 <div class="result-group">
                     <h2 class="group-header">Thông tin chung:</h2>
                     <div class="info-grid">
-                        <p>Nội dung không khả dụng ở bản demo-web</p>
+                        <p>Nội dung không khả dụng ở bản <i>DEMO</i> - <i>WEB</i></p>
                     </div>
                 </div>
 
@@ -172,15 +172,15 @@
                     <h2 class="group-header">Hướng dẫn bón phân</h2>
                     
                     <div class="guide-item">
-                        <span class="blue-text">* Bón vôi bột:</span><span id="VOI"></span>
+                        <span class="blue-text">* Bón vôi bột:</span> <span id="VOI"></span>
                     </div>
 
                     <div class="guide-item">
-                        <span class="blue-text">* Phân hữu cơ:</span><span id="HC"></span>
+                        <span class="blue-text">* Phân hữu cơ:</span> <span id="HC"></span>
                     </div>
 
                     <div class="guide-item">
-                        <span class="blue-text">* Phân vô cơ:</span><span id="VC"></span>
+                        <span class="blue-text">* Phân vô cơ:</span> <span id="VC"></span>
                     </div>
                 </div>
 
@@ -210,13 +210,8 @@
             const dh = 2532;
             const ww = window.innerWidth;
             const wh = window.innerHeight;
-
-            // Logic của bạn: Chọn tỉ lệ nhỏ hơn để luôn nằm trọn trong màn hình
             const scale = Math.min(ww / dw, wh / dh);
 
-            // Áp dụng:
-            // 1. translate(-50%, -50%): Để căn giữa từ vị trí top 50% left 50%
-            // 2. scale(...): Để thu phóng theo tỉ lệ tính được
             container.style.transform = `translate(-50%, -50%) scale(${scale})`;
         }
 
