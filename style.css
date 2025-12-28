@@ -410,7 +410,6 @@ input[type="radio"] {
 /* Bố cục thông tin chung */
 .info-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 20px;
     font-size: 32px;
 }
